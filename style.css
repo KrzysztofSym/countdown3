@@ -1,0 +1,194 @@
+/* Add CSS here */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Single+Day&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Share+Tech+Mono&family=Single+Day&display=swap');
+/*===== VARIABLES CSS =====*/
+
+:root {
+    --h1-fs: 3rem;    --h1-fs-media: 3rem; 
+    --h2-fs: 1.5rem;  --h2-fs-media: 2rem;
+    --h3-fs: 1.3rem;  --h3-fs-media: 1.8rem;
+    --h4-fs: 1.1rem;  --h4-fs-media: 1.5rem;
+    --p-fs: .8rem;    --p-fs-media: 1.1rem;
+    --a-fs: .7rem;    --a-fs-media: 1.1rem;
+    --li-fs: .7rem;   --li-fs-media: 1.1rem;    
+
+    --clr-bg-main: #425051;
+    --clr-bg-pri: #31383e;
+    --clr-bg-sec: #2c3535;
+    --clr-acc-main: #2d373f;
+    --clr-acc-pri: #d02d58;
+    --clr-acc-sec: #4d6865;
+    --clr-acc-thi: #d80000;
+    --clr-acc-four: #ad0000;
+    --clr-acc-fif: #e03333;
+    --clr-text-main: #67696a;
+    --clr-text-pri: #36454F;  
+    
+    --shadow-color: #33cbb8;    
+    --main-ff: 'Oswald', sans-serif;
+  }
+
+/*===== BASE =====*/
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--main-ff);
+    font-size: var(--p-fs);
+    background: var(--clr-bg-main);
+    color: var(--clr-text-main);
+    width: 100%;
+    min-height: 100vh;
+}   
+
+h1, h2, h3, h4,
+p, a, li {
+    margin: 0;
+}
+
+h1 {font-size: var(--h1-fs);
+    color: var(--clr-acc-main);
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+h2 {font-size: var(--h2-fs);}
+h3 {font-size: var(--h3-fs);}
+h4 {font-size: var(--h4-fs);}
+
+p, a, li {font-size: var(--p-fs);}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-text-main);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+
+    }
+}
+    /* animation: scaleUp 1s ease-in-out;
+    transform-origin: center center; */
+
+/*===== BUTTONS =====*/
+
+.btn {
+    display: inline-block;
+    background-color:  #fff;
+    color: var(--clr-text-main);
+    padding: .5rem 1.5rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: .2s;
+}
+  
+.btn:hover {
+    box-shadow: 0 10px 36px rgba(0, 0, 0, .15);
+}
+
+.btn:active {
+    scale: .97;
+}
+
+/*===== PROJECT CSS =====*/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .container {
+    min-width: 400px;
+    width: 90%;
+    background-color: var(--clr-bg-main);
+    position: relative;
+    animation: scaleUp 1s ease-in-out;
+    transform-origin: center center;
+    box-shadow: 0px 8px 30px -10px var(--clr-bg-pri);
+} */
+
+.time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+    background-color: var(--clr-bg-pri);
+    padding: 20px;
+    color: rgba(15, 41, 40, 0.9);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.time h2 {
+    font-size: 2.5rem;
+    font-family: "Share Tech Mono", monospace;
+    font-weight: 400;
+    color: var(--clr-acc-pri);
+}
+.time small {
+    position: absolute;
+    text-transform: uppercase;
+    left: .2rem;
+    bottom: .5rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    writing-mode: tb-rl;
+    transform: scale(-1, -1);
+    color: var(--clr-acc-sec);
+}
+.time:after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    border-radius: 50%;
+    top: 2rem;
+    left: .2rem;
+    background-color: var(--clr-bg-sec);
+    z-index: -1;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    
+}
